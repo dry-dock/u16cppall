@@ -1,2 +1,6 @@
-# u16cppall
-Docker image with ubuntu 16.04,  C, C++, all services &amp; tools
+u16cppall
+
+Shippable CI image for C++ on Ubuntu 16.04. Available GCC and Clang versions:
+
+   1. gcc: 5.4.1
+   2. clang: 3.9.0
