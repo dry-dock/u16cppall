@@ -12,8 +12,7 @@ echo "======================= Installing gcc 6 ======================"
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get install gcc-6 g++-6
-VER=6 ; PRIO=50
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-$VER $PRIO --slave /usr/bin/g++ g++ /usr/bin/g++-$VER
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 50 --slave /usr/bin/g++ g++ /usr/bin/g++-6
 gcc --version
 echo "================== Successfully Installed gcc 6 ==============="
 
