@@ -8,20 +8,23 @@ apt-get clean
 apt-get update
 echo "======================== Cleaned apt-get ======================"
 
-echo "======================= Installing gcc 7 ======================"
+echo "======================= Installing gcc 7.1 ======================"
 add-apt-repository ppa:ubuntu-toolchain-r/test
 apt-get update
-apt-get install gcc-7 g++-7
+apt-get install -y \
+  gcc-7=7.1.0-5ubuntu2~16.04 \
+  g++-7=7.1.0-5ubuntu2~16.04
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 50 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-7 50
 gcc --version
 echo "================== Successfully Installed gcc 7 ==============="
 
-echo "==================== Installing clang 4.0.0 ==================="
-wget -nv http://llvm.org/releases/4.0.0/clang+llvm-4.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
-tar xf clang+llvm-4.0.0-x86_64-linux-gnu-ubuntu-16.04.tar.xz
-cd clang+llvm-4.0.0-x86_64-linux-gnu-ubuntu-16.04
+CLANG_VER=4.0.0
+echo "==================== Installing clang $CLANG_VER ==================="
+wget -nv http://llvm.org/releases/"$CLANG_VER"/clang+llvm-"$CLANG_VER"-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+tar xf clang+llvm-"$CLANG_VER"-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+cd clang+llvm-"$CLANG_VER"-x86_64-linux-gnu-ubuntu-16.04
 cp -R * /usr/local/
 cd ../
 clang --version
-echo "=============== Successfully Installed clang 4.0.0 ============"
+echo "=============== Successfully Installed clang $CLANG_VER ============"
