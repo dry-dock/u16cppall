@@ -25,8 +25,8 @@ CLANG_VERSION=5.0.1
 echo "==================== Installing clang $CLANG_VERSION ==================="
 
 wget -nv http://releases.llvm.org/"$CLANG_VERSION"/clang+llvm-"$CLANG_VERSION"-x86_64-linux-gnu-ubuntu-16.04.tar.xz
-tar xf clang+llvm-"$CLANG_VERSION"-linux-x86_64-ubuntu16.04.tar.xz
-cd clang+llvm-"$CLANG_VERSION"-linux-x86_64-ubuntu16.04
+tar xf clang+llvm-"$CLANG_VERSION"-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+cd clang+llvm-"$CLANG_VERSION"-x86_64-linux-gnu-ubuntu-16.04
 cp -R * /usr/local/
 cd ../
 clang --version
