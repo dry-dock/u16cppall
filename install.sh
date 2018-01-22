@@ -19,9 +19,12 @@ update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-7 50
 gcc --version
 echo "================== Successfully Installed gcc 7.2 ==============="
 
-CLANG_VERSION=5.0.0
+apt-get install autoconf=2.69* automake=1:1.15* ccache=3.2.4* libssl-dev=1.0.2g*
+
+CLANG_VERSION=5.0.1
 echo "==================== Installing clang $CLANG_VERSION ==================="
-wget -nv http://releases.llvm.org/"$CLANG_VERSION"/clang+llvm-"$CLANG_VERSION"-linux-x86_64-ubuntu16.04.tar.xz
+
+wget -nv http://releases.llvm.org/"$CLANG_VERSION"/clang+llvm-"$CLANG_VERSION"-x86_64-linux-gnu-ubuntu-16.04.tar.xz
 tar xf clang+llvm-"$CLANG_VERSION"-linux-x86_64-ubuntu16.04.tar.xz
 cd clang+llvm-"$CLANG_VERSION"-linux-x86_64-ubuntu16.04
 cp -R * /usr/local/
