@@ -19,7 +19,7 @@ update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-7 50
 gcc --version
 echo "================== Successfully Installed gcc 7.2 ==============="
 
-apt-get install autoconf=2.69* automake=1.15* ccache=3.2* libssl-dev=1.0*
+apt-get install autoconf=2.69* automake=1:1.15* ccache=3.2* libssl-dev=1.0*
 
 CLANG_VERSION=5.0.1
 echo "==================== Installing clang $CLANG_VERSION ==================="
