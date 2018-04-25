@@ -12,14 +12,18 @@ echo "======================= Installing gcc 7.2 ======================"
 add-apt-repository ppa:ubuntu-toolchain-r/test
 apt-get update
 apt-get install -y \
-  gcc-7=7.2*-1ubuntu1~16.04 \
-  g++-7=7.2*-1ubuntu1~16.04
+  gcc-7=7.3* \
+  g++-7=7.3*
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 50 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-7 50
 gcc --version
 echo "================== Successfully Installed gcc 7.2 ==============="
 
-apt-get install autoconf=2.69* automake=1:1.15* ccache=3.2* libssl-dev=1.0*
+apt-get install \
+  autoconf=2.69* \
+  automake=1:1.15* \
+  ccache=3.2* \
+  libssl-dev=1.0*
 
 CLANG_VERSION=5.0.1
 echo "==================== Installing clang $CLANG_VERSION ==================="
