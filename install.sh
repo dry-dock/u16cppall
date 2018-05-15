@@ -8,16 +8,16 @@ apt-get clean
 apt-get update
 echo "======================== Cleaned apt-get ======================"
 
-echo "======================= Installing gcc 7.2 ======================"
+echo "======================= Installing gcc 8.0.1 ======================"
 add-apt-repository ppa:ubuntu-toolchain-r/test
 apt-get update
 apt-get install -y \
-  gcc-7=7.3* \
-  g++-7=7.3*
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 50 --slave /usr/bin/g++ g++ /usr/bin/g++-7
-update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-7 50
+  gcc-8=8* \
+  g++-8=8*
+update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8
+update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-8 80
 gcc --version
-echo "================== Successfully Installed gcc 7.2 ==============="
+echo "================== Successfully Installed gcc 8.0.1 ==============="
 
 apt-get install \
   autoconf=2.69* \
@@ -25,7 +25,7 @@ apt-get install \
   ccache=3.2* \
   libssl-dev=1.0*
 
-CLANG_VERSION=5.0.1
+CLANG_VERSION=6.0.0
 echo "==================== Installing clang $CLANG_VERSION ==================="
 
 wget -nv http://releases.llvm.org/"$CLANG_VERSION"/clang+llvm-"$CLANG_VERSION"-x86_64-linux-gnu-ubuntu-16.04.tar.xz
