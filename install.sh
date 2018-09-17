@@ -8,7 +8,7 @@ apt-get clean
 apt-get update
 echo "======================== Cleaned apt-get ======================"
 
-echo "======================= Installing gcc 8.0.1 ======================"
+echo "======================= Installing gcc 8.1.0 ======================"
 add-apt-repository ppa:ubuntu-toolchain-r/test
 apt-get update
 apt-get install -y \
@@ -17,7 +17,7 @@ apt-get install -y \
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-8 80
 gcc --version
-echo "================== Successfully Installed gcc 8.0.1 ==============="
+echo "================== Successfully Installed gcc 8.1.0 ==============="
 
 apt-get install \
   autoconf=2.69* \
